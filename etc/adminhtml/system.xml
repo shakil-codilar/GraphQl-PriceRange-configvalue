@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="graphqlDemo_module" translate="label" sortOrder="250">
+            <label>Price Management</label>
+        </tab>
+        <section id="graphql" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>a-custom-css-class-to-style-this-tab</class>
+            <label>Price Activity</label>
+            <tab>graphqlDemo_module</tab>
+            <resource>Codilar_GraphQlDemo::graphql_config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="maximum_price" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Maximum Price</label>
+                    <comment>For maximum Price</comment>
+                </field>
+
+                <field id="minimum_price" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Minimum Price</label>
+                    <comment>For minimum Price</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

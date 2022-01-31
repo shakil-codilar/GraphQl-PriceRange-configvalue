@@ -38,9 +38,8 @@ class ItemResolver implements ResolverInterface
         $searchCriteriaFilter = $this->searchCriteriaBuilder->addFilter('brand', $id, 'eq')->create();
         $productCollection = $this->productRepository->getList($searchCriteriaFilter);
         $products=$productCollection->getItems();
-        
-
         $x=0;
+        $productRecord['total_count']= $productCollection->getTotalCount();
         $productRecord['items'] = [];
         foreach($products as $product) {
             $productId = $product->getId();
